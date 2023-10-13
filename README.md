@@ -40,11 +40,11 @@ Briefly describe what each user role/authority can do. (These are user stories.)
 ### Example
 
 - Create a user (anyone).
-- Play the game (anyone).
-- Save the game (anyone).
-- Load the game (anyone).
-- Delete a save (anyone).
-- Delete an account (anyone).
+- Play the game (USER).
+- Save the game (USER).
+- Load the game (USER).
+- Delete a save (USER).
+- Delete an account (USER).
 
 ## 5. User Stories/Scenarios
 
