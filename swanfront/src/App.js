@@ -6,6 +6,7 @@ import logo from "./assets/photos/logo.png";
 import NotFound from "./components/NotFound";
 import Game from "./components/Game";
 import Login from "./components/Login";
+import NewUser from "./components/NewUser";
 import AuthContext from "./context/AuthContext";
 import { refreshToken } from "./services/authapi";
 
@@ -64,6 +65,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/game" element={<Game />} />
+          <Route path="/newuser" element={<NewUser />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>

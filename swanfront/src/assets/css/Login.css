@@ -1,0 +1,70 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom right, black, #a42cd6, #ff007f); /* gradient from black to purple to pink */
+  color: white; /* making text color white for better readability on dark background */
+}
+
+.login-form {
+  background-color: rgba(255, 255, 255, 0.8); /* semi-transparent white */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-form .form-label {
+  color: #333; /* dark text color for the form labels, considering the form background is light */
+  margin-bottom: 0.5rem; /* space between label and input */
+}
+
+.form-label {
+  margin-right: 1rem; /* Adjust as needed */
+}
+
+.login-form .form-control {
+  margin-bottom: 1.5rem; /* space between input fields */
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem; /* space above the button group */
+}
+
+.btn-cancel, .btn-login, .btn-new-user {
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  display: inline-block; /* to ensure proper spacing */
+}
+
+.btn-cancel {
+  background-color: #555; /* dark button for cancel */
+}
+
+.btn-cancel:hover {
+  background-color: #444;
+}
+
+.btn-login {
+  background-color: #a42cd6; /* purple for login */
+  border: none; /* remove default border */
+}
+
+.btn-login:hover {
+  background-color: #9928c7;
+}
+
+.btn-new-user {
+  background-color: #ff007f; /* pink for new user */
+}
+
+.btn-new-user:hover {
+  background-color: #e60072;
+}
