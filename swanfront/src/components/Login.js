@@ -40,6 +40,7 @@ function Login() {
 
   return (
     <div className="login-container">
+      <div className="banner">S W A N &nbsp; S A G A</div>
       <div className="login-form">
         {message && <Alert variant="success">{message}</Alert>} {/* New line */}
         {errors.map((error, i) => (
@@ -49,34 +50,30 @@ function Login() {
         ))}
         <Form onSubmit={handleSubmit}>
           <Form.Group as={Row} className="mb-3" controlId="username">
-            <Form.Label id="userlabel">Username</Form.Label>
-              {" "}
-              <Form.Control
-                className="full-width"
-                required
-                name="userName"
-                onChange={(event) => setUser(event.target.value)}
-                value={user}
-                type="text"
-                placeholder="Username"
-                autoFocus
-              />
-
+            <Form.Label id="userlabel">Username</Form.Label>{" "}
+            <Form.Control
+              className="full-width"
+              required
+              name="userName"
+              onChange={(event) => setUser(event.target.value)}
+              value={user}
+              type="text"
+              placeholder="Username"
+              autoFocus
+            />
           </Form.Group>
 
           <Form.Group as={Row} className="mb-3" controlId="password">
-            <Form.Label id="passlabel">Password</Form.Label>
-              {" "}
-              <Form.Control
-                className="full-width"
-                required
-                name="userPassword"
-                onChange={(event) => setPassword(event.target.value)}
-                value={password}
-                type="password"
-                placeholder="Password"
-              />
-
+            <Form.Label id="passlabel">Password</Form.Label>{" "}
+            <Form.Control
+              className="full-width"
+              required
+              name="userPassword"
+              onChange={(event) => setPassword(event.target.value)}
+              value={password}
+              type="password"
+              placeholder="Password"
+            />
           </Form.Group>
 
           <div className="btn-group">

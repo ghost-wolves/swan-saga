@@ -17,21 +17,6 @@ const TIMEOUT_MILLISECONDS = 14 * 16 * 1000;
 // Define a variable for the localStorage token item key
 const LOCAL_STORAGE_TOKEN_KEY = "swanToken";
 
-function HandleRoutes() {
-  const navigate = useNavigate();
-  const auth = useContext(AuthContext); // if you're using the context
-
-  useEffect(() => {
-    if (auth.user) {
-      navigate("/game");
-    } else {
-      navigate("/");
-    }
-  }, [auth.user, navigate]);
-
-  return null; // This component does not render anything
-}
-
 function App() {
 
   const [user, setUser] = useState(null);
@@ -58,6 +43,7 @@ function App() {
     resetUser();
   }, [resetUser]);
 
+
   const logout = () => {
     setUser(null);
     // NEW: remove the token from localStorage
@@ -68,6 +54,7 @@ function App() {
     user: user ? { ...user } : null,
     handleLoggedIn(user) {
       setUser(user);
+      localStorage.setItem(LOCAL_STORAGE_TOKEN_KEY, user.token);
       setTimeout(resetUser, TIMEOUT_MILLISECONDS);
     },
     hasAuthority(authority) {

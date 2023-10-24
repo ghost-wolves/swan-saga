@@ -77,3 +77,35 @@
 .btn-new-user:hover {
   background-color: #e60072;
 }
+
+.banner2 {
+  font-family: 'Arial', sans-serif; /* Choose a cool, bold font */
+  font-size: 3rem; /* Adjust size as needed */
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  letter-spacing: 5px; /* Kerning */
+  text-shadow: 3px 3px #a42cd6; /* Shadow for cool effect, color matches your theme */
+  padding: 20px;
+  user-select: none; /* Prevents the user from selecting the text */
+}
+
+.banner {
+  font-family: 'Arial', sans-serif; /* Choose a cool, bold font */
+  font-size: 3rem; /* Adjust size as needed */
+  font-weight: bold;
+  text-align: center;
+  color: transparent; /* Makes the text itself transparent, so the gradient shows */
+  background: linear-gradient(to right, #fc236b, #f311f3); /* Gradient from pink to purple */
+  -webkit-background-clip: text; /* Clips the background to the text, so it only shows up on the text */
+  background-clip: text;
+  letter-spacing: 5px; /* Kerning */
+  text-shadow: 0px 0px 50px #ffffff; /* White glow around the text */
+  padding: 20px;
+  user-select: none; /* Prevents the user from selecting the text */
+}
+
+.login-container {
+  flex-direction: column; /* Stack children (banner and form) vertically */
+  /* other styles remain unchanged */
+}
