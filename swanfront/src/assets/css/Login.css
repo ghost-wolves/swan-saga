@@ -21,9 +21,18 @@
   margin-bottom: 0.5rem; /* space between label and input */
 }
 
-.form-label {
+#userlabel {
   margin-right: 1rem; /* Adjust as needed */
 }
+
+#passlabel {
+  margin-right: 1.3rem;
+}
+
+.full-width {
+  width: 60%; /* This makes sure the input field uses all available space */
+}
+
 
 .login-form .form-control {
   margin-bottom: 1.5rem; /* space between input fields */

@@ -1,6 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-import { useState, useCallback, useEffect } from "react";
+import { useNavigate, BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState, useCallback, useContext, useEffect } from "react";
 
 import logo from "./assets/photos/logo.png";
 import NotFound from "./components/NotFound";
@@ -10,13 +9,31 @@ import NewUser from "./components/NewUser";
 import AuthContext from "./context/AuthContext";
 import { refreshToken } from "./services/authapi";
 
+
+
 //set a timeout to refresh tokens
 const TIMEOUT_MILLISECONDS = 14 * 16 * 1000;
 
 // Define a variable for the localStorage token item key
 const LOCAL_STORAGE_TOKEN_KEY = "swanToken";
 
+function HandleRoutes() {
+  const navigate = useNavigate();
+  const auth = useContext(AuthContext); // if you're using the context
+
+  useEffect(() => {
+    if (auth.user) {
+      navigate("/game");
+    } else {
+      navigate("/");
+    }
+  }, [auth.user, navigate]);
+
+  return null; // This component does not render anything
+}
+
 function App() {
+
   const [user, setUser] = useState(null);
   // NEW: Define a state variable to track if
   // the restore login attempt has completed
@@ -58,6 +75,7 @@ function App() {
     },
     logout,
   };
+
 
   return (
     <AuthContext.Provider value={auth}>

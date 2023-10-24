@@ -1,12 +1,12 @@
-import { Button, Form, Alert } from "react-bootstrap";
+import { Button, Form, Alert, Row, Col } from "react-bootstrap";
 import { useState, useContext } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link, useLocation } from "react-router-dom"; // Added useLocation
 import "../assets/css/Login.css";
 import { login } from "../services/authapi";
 import AuthContext from "../context/AuthContext";
 
 function Login() {
-  //navigate stuff
+  const location = useLocation(); // New line
   const navigate = useNavigate();
 
   //our states
@@ -14,7 +14,10 @@ function Login() {
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState([]);
 
-  //our contenxt for authentication
+  // New state for the message
+  const [message, setMessage] = useState(location.state?.message || ""); // New line
+
+  //our context for authentication
   const auth = useContext(AuthContext);
 
   //submit button function
@@ -35,56 +38,62 @@ function Login() {
       });
   };
 
-   return (
-     <div className="login-container">
-       <div className="login-form">
-         {errors.map((error, i) => (
-           <Alert variant="danger" key={i}>
-             {" "}
-             {/* Corrected 'variant' attribute */}
-             {error}
-           </Alert>
-         ))}
-         <Form onSubmit={handleSubmit}>
-           <Form.Group className="mb-3" controlId="username">
-             <Form.Label>Username</Form.Label>
-             <Form.Control
-               required
-               name="userName"
-               onChange={(event) => setUser(event.target.value)}
-               value={user}
-               type="text"
-               placeholder="Username"
-               autoFocus
-             />
-           </Form.Group>
-           <Form.Group className="mb-3" controlId="password">
-             <Form.Label>Password</Form.Label>
-             <Form.Control
-               required
-               name="userPassword"
-               onChange={(event) => setPassword(event.target.value)}
-               value={password}
-               type="password"
-               placeholder="Password"
-             />
-           </Form.Group>
+  return (
+    <div className="login-container">
+      <div className="login-form">
+        {message && <Alert variant="success">{message}</Alert>} {/* New line */}
+        {errors.map((error, i) => (
+          <Alert variant="danger" key={i}>
+            {error}
+          </Alert>
+        ))}
+        <Form onSubmit={handleSubmit}>
+          <Form.Group as={Row} className="mb-3" controlId="username">
+            <Form.Label id="userlabel">Username</Form.Label>
+              {" "}
+              <Form.Control
+                className="full-width"
+                required
+                name="userName"
+                onChange={(event) => setUser(event.target.value)}
+                value={user}
+                type="text"
+                placeholder="Username"
+                autoFocus
+              />
 
-           <div className="btn-group">
-             <Link className="btn-cancel" to="/">
-               Cancel
-             </Link>
-             <Button type="submit" className="btn-login">
-               Log In
-             </Button>
-             <Link className="btn-new-user" to="/newuser">
-               New User
-             </Link>
-           </div>
-         </Form>
-       </div>
-     </div>
-   );
+          </Form.Group>
+
+          <Form.Group as={Row} className="mb-3" controlId="password">
+            <Form.Label id="passlabel">Password</Form.Label>
+              {" "}
+              <Form.Control
+                className="full-width"
+                required
+                name="userPassword"
+                onChange={(event) => setPassword(event.target.value)}
+                value={password}
+                type="password"
+                placeholder="Password"
+              />
+
+          </Form.Group>
+
+          <div className="btn-group">
+            <Link className="btn-cancel" to="/">
+              Cancel
+            </Link>
+            <Button type="submit" className="btn-login">
+              Log In
+            </Button>
+            <Link className="btn-new-user" to="/newuser">
+              New User
+            </Link>
+          </div>
+        </Form>
+      </div>
+    </div>
+  );
 }
 
 export default Login;

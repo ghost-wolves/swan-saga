@@ -31,7 +31,9 @@ function NewUser() {
 
       if (response.ok) {
         // If the user was successfully created, you might want to redirect to the login page
-        navigate("/login");
+        navigate("/", {
+          state: { message: `User: ${userData.username} created! Please log in!` },
+        });
       } else {
         // If there was an error, you might want to display these to the user
         const errorData = await response.json();
@@ -59,8 +61,9 @@ function NewUser() {
         {error && <Alert variant="danger">{error}</Alert>}
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="username">
-            <Form.Label>Username</Form.Label>
+            <Form.Label id="userlabel">Username</Form.Label>
             <Form.Control
+              className="full-width"
               type="text"
               placeholder="Enter username"
               name="username"
@@ -71,8 +74,9 @@ function NewUser() {
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="password">
-            <Form.Label>Password</Form.Label>
+            <Form.Label id="passlabel">Password</Form.Label>
             <Form.Control
+              className="full-width"
               type="password"
               placeholder="Password"
               name="password"
