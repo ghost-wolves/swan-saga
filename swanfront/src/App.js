@@ -4,8 +4,11 @@ import { useState, useCallback, useContext, useEffect } from "react";
 import logo from "./assets/photos/logo.png";
 import NotFound from "./components/NotFound";
 import Game from "./components/Game";
+import RPGGame from "./components/RPGGame";
 import Login from "./components/Login";
+import Footer from "./components/Footer";
 import NewUser from "./components/NewUser";
+import Layout from "./components/Layout";
 import AuthContext from "./context/AuthContext";
 import { refreshToken } from "./services/authapi";
 
@@ -67,12 +70,15 @@ function App() {
   return (
     <AuthContext.Provider value={auth}>
       <Router>
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/game" element={<Game />} />
-          <Route path="/newuser" element={<NewUser />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="/game" element={<Game />} />
+            <Route path="/newuser" element={<NewUser />} />
+            <Route path="/rpggame" element={<RPGGame />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Layout>
       </Router>
     </AuthContext.Provider>
   );

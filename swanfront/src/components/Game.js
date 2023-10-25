@@ -18,8 +18,7 @@ function Game() {
   }, [auth.user, navigate, loading]);
 
   useEffect(() => {
-    // This is where you'd actually check the user's authentication status.
-    // For the sake of this example, I'm using a timeout to simulate an async operation.
+
     setTimeout(() => {
       setLoading(false); // Mark the loading as completed after the "check"
     }, 1000);
