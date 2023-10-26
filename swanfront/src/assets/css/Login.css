@@ -8,7 +8,7 @@
 }
 
 .login-form {
-  background-color: rgba(255, 255, 255, 0.8); /* semi-transparent white */
+  background-color: rgba(31, 31, 31, 0.8); /* semi-transparent white */
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -17,13 +17,15 @@
 }
 
 .login-form .form-label {
-  color: #333; /* dark text color for the form labels, considering the form background is light */
+  color: #cacaca; /* dark text color for the form labels, considering the form background is light */
   margin-bottom: 0.5rem; /* space between label and input */
 }
 
 
 .full-width {
   width: 100%; /* This makes sure the input field uses all available space */
+  background-color: black;
+
 }
 
 

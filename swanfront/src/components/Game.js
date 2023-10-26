@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
+import { Container, Nav, Navbar, NavDropdown, Row, Col, Image, Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
+import girl from "../assets/photos/girlswan2.jpg";
+import swanIcon from "../assets/photos/swanicon.png";
+import "../assets/css/Game.css";
 import AuthContext from "../context/AuthContext";
 
 function Game() {
@@ -28,8 +32,39 @@ function Game() {
     return <div>Loading...</div>; // Display a loading message while checking the authentication status
   }
 
-  // If not loading and user is authenticated, display the game content
-  return <div>{auth.user ? "Logged In" : "Not Logged In"}</div>;
+  return (
+    <Container fluid>
+      <Row className="align-items-center">
+        <Col xs={6} className="text-center">
+          <Card className="intro-card">
+            <Card.Body className="intro-text">
+              <h1 className="welcome-text">WELCOME</h1>
+              <img src={swanIcon} alt="Swan Icon" className="swan-image" />
+              <p className="description-text">
+                to a world where time drifts slowly. A world where wonder and
+                magic are just around the corner. Experience the perfect game
+                for your way of life. Direct from the sleepy heartland of
+                America, this multi-platinum RPG has won the hearts of millions.
+              </p>
+              <p className="description-text">
+                Set adrift in the timeless land of Lospé - The Isle of Dreams.
+                Join Kyre in her quest to find the Swan of Sorrow and save the
+                realm from the Notspoken.
+              </p>
+              <p className="description-text">
+                {" "}
+                Follow the will-o'-the-wisp into the great unknown. No other
+                game gives you the feeling of Swan Saga.
+              </p>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col xs={6}>
+          <Image src={girl} fluid />
+        </Col>
+      </Row>
+    </Container>
+  );
 }
 
 export default Game;

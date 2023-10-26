@@ -1,0 +1,38 @@
+.intro-card {
+  background-color: #F065AD; /* Adjust to the color you desire */
+  border-radius: 15px; /* Rounded corners */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+body {
+  background: linear-gradient(to top, #03017D, #000000);
+}
+
+.welcome-text {
+  font-family: 'Swanstone Trial';
+  font-size: 5rem;
+  font-weight: bold;
+  text-align: center;
+  color: transparent; /* Makes the text itself transparent, so the gradient shows */
+  background: linear-gradient(to right, #000000, #000000); /* Gradient from pink to purple */
+  -webkit-background-clip: text; /* Clips the background to the text, so it only shows up on the text */
+  background-clip: text;
+  letter-spacing: 30px; /* Kerning */
+  text-shadow: 2px 2px 5px #000000;
+  padding: 10px;
+}
+
+.description-text {
+  font-family: "Swanstone Trial";
+  font-size: 2rem;
+  font-weight: regular;
+  text-align: center;
+}
+
+.swan-image {
+  width: 50px;  /* or whatever size you want */
+  height: auto; /* to maintain the aspect ratio */
+  display: block;
+  margin: 20px auto; /* center the image and give space above and below */
+}
