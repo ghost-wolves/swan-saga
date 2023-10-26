@@ -7,10 +7,13 @@ function Layout({ children }) {
 
   return (
     <div>
-      {(location.pathname === "/game" && <NavBar />) ||
-        ("/about" && <NavBar />)}
+      {(location.pathname === "/game" || location.pathname === "/about" || location.pathname === "/rpggame") && (
+        <NavBar />
+      )}
       {children}
-      {(location.pathname === "/game" && <Footer />) || ("/about" && <Footer />)}
+      {(location.pathname === "/game" || location.pathname === "/about" || location.pathname === "/rpggame") && (
+        <Footer />
+      )}
     </div>
   );
 }
