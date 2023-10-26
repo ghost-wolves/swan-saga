@@ -50,30 +50,37 @@ function Login() {
         ))}
         <Form onSubmit={handleSubmit}>
           <Form.Group as={Row} className="mb-3" controlId="username">
-            <Form.Label id="userlabel">Username</Form.Label>{" "}
-            <Form.Control
-              className="full-width"
-              required
-              name="userName"
-              onChange={(event) => setUser(event.target.value)}
-              value={user}
-              type="text"
-              placeholder="Username"
-              autoFocus
-            />
+            <Form.Label id="userlabel" column sm="3">
+              Username
+            </Form.Label>
+            <Col sm="9">
+              <Form.Control
+                className="full-width"
+                required
+                name="userName"
+                onChange={(event) => setUser(event.target.value)}
+                value={user}
+                type="text"
+                placeholder="Username"
+                autoFocus
+              />
+            </Col>
           </Form.Group>
-
           <Form.Group as={Row} className="mb-3" controlId="password">
-            <Form.Label id="passlabel">Password</Form.Label>{" "}
-            <Form.Control
-              className="full-width"
-              required
-              name="userPassword"
-              onChange={(event) => setPassword(event.target.value)}
-              value={password}
-              type="password"
-              placeholder="Password"
-            />
+            <Form.Label id="passlabel" column sm="3">
+              Password
+            </Form.Label>
+            <Col sm="9">
+              <Form.Control
+                className="full-width"
+                required
+                name="userPassword"
+                onChange={(event) => setPassword(event.target.value)}
+                value={password}
+                type="password"
+                placeholder="Password"
+              />
+            </Col>
           </Form.Group>
 
           <div className="btn-group">

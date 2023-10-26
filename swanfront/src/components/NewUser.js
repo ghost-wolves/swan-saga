@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { Form, Button, Alert } from "react-bootstrap";
+import { Form, Button, Alert, Row, Col } from "react-bootstrap";
 import "../assets/css/Login.css";
 
 function NewUser() {
@@ -53,40 +53,46 @@ function NewUser() {
 
   return (
     <div className="login-container">
-      {" "}
+      <div className="banner">S W A N &nbsp; S A G A</div>{" "}
       {/* Use the same class as the Login component */}
       <div className="login-form">
         {" "}
         {/* Use the same class as the Login component */}
         {error && <Alert variant="danger">{error}</Alert>}
         <Form onSubmit={handleSubmit}>
-          <Form.Group className="mb-3" controlId="username">
-            <Form.Label id="userlabel">Username</Form.Label>
-            <Form.Control
-              className="full-width"
-              type="text"
-              placeholder="Enter username"
-              name="username"
-              value={userData.username}
-              onChange={handleChange}
-              required
-            />
+          <Form.Group as={Row} className="mb-3" controlId="username">
+            <Form.Label id="userlabel" column sm="3">
+              Username
+            </Form.Label>
+            <Col sm="9">
+              <Form.Control
+                className="full-width"
+                type="text"
+                placeholder="Enter username"
+                name="username"
+                value={userData.username}
+                onChange={handleChange}
+                required
+              />
+            </Col>
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="password">
-            <Form.Label id="passlabel">Password</Form.Label>
-            <Form.Control
-              className="full-width"
-              type="password"
-              placeholder="Password"
-              name="password"
-              value={userData.password}
-              onChange={handleChange}
-              required
-            />
+          <Form.Group as={Row} className="mb-3" controlId="password">
+            <Form.Label id="passlabel" column sm="3">
+              Password
+            </Form.Label>
+            <Col sm="9">
+              <Form.Control
+                className="full-width"
+                type="password"
+                placeholder="Password"
+                name="password"
+                value={userData.password}
+                onChange={handleChange}
+                required
+              />
+            </Col>
           </Form.Group>
-
-          {/* Include additional fields here */}
 
           <div className="btn-group">
             <Button variant="primary" type="submit" className="btn-login">
@@ -95,7 +101,6 @@ function NewUser() {
             <Link className="btn-cancel" to="/">
               Back to Login
             </Link>
-            {/* If you need a "New User" button here, you can add it like in the Login component */}
           </div>
         </Form>
       </div>

@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {font-family:"Manaspace";src:url("./assets/fonts/manafont.ttf") format("truetype");font-weight:normal;font-style:normal;}
+
+@font-face{font-family:"Final Fantasy";src:url("./assets/fonts/finalf.ttf") format("truetype");}
+
+@font-face {
+    font-family: 'Swanstone Trial';
+    src: url('assets/fonts/SwanstoneTrial-Rg.eot');
+    src: url('assets/fonts/SwanstoneTrial-Rg.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/SwanstoneTrial-Rg.woff2') format('woff2'),
+        url('assets/fonts/SwanstoneTrial-Rg.woff') format('woff'),
+        url('assets/fonts/SwanstoneTrial-Rg.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body::after {
+  content: url('./assets/photos/swanicon3.png');
+  display: none;
+}

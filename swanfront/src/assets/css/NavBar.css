@@ -1,0 +1,45 @@
+.navbar {
+    /*background-color: #ff00bf;*/
+    background: linear-gradient(to right, #ff00bf, #e044ff);
+
+}
+
+.navbar .nav-link {
+    color: white;
+    font-size: large;
+    font-family: 'Manaspace', regular;
+}
+
+.navbar .title {
+  font-size: x-large;
+  font-family: 'Swanstone Trial';
+}
+
+.navbar .nav-link:hover {
+  color: purple;
+}
+
+.nav-link-margin {
+  margin-right: 30px; /* adjust as needed */
+}
+
+.navbar-brand img {
+  transition: opacity 0.3s ease;  /* this will make the change smooth */
+}
+
+.navbar-brand:hover img {
+  opacity: 0;
+}
+
+.navbar-brand {
+  position: relative; /* Needed for positioning the pseudo-element */
+}
+
+.navbar-brand:hover::before {
+  content: url('../photos/swanicon3.png');
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  background-size: cover;
+}
+

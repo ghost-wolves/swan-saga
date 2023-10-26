@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Swanstone Trial';
+    src: url('assets/fonts/SwanstoneTrial-Rg.eot');
+    src: url('assets/fonts/SwanstoneTrial-Rg.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/SwanstoneTrial-Rg.woff2') format('woff2'),
+        url('assets/fonts/SwanstoneTrial-Rg.woff') format('woff'),
+        url('assets/fonts/SwanstoneTrial-Rg.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

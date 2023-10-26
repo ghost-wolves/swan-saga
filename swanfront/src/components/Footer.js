@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <div>
-      <center>©2023 Final Fantasy React</center>
+      <center>©2023 Swan Saga</center>
     </div>
   );
 }
