@@ -53,7 +53,8 @@ function Game() {
               </p>
               <p className="description-text">
                 {" "}
-                Follow the will-o'-the-wisp into the great unknown. No other
+                Follow the will-o'-the-wisp into the great unknown.</p>
+                <p className="description-text">No other
                 game gives you the feeling of Swan Saga.
               </p>
             </Card.Body>

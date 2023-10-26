@@ -7,6 +7,7 @@ import Game from "./components/Game";
 import RPGGame from "./components/RPGGame";
 import Login from "./components/Login";
 import Footer from "./components/Footer";
+import AboutMe from "./components/AboutMe";
 import NewUser from "./components/NewUser";
 import Layout from "./components/Layout";
 import AuthContext from "./context/AuthContext";
@@ -75,6 +76,7 @@ function App() {
             <Route path="/" element={<Login />} />
             <Route path="/game" element={<Game />} />
             <Route path="/newuser" element={<NewUser />} />
+            <Route path="/about" element={<AboutMe />} />
             <Route path="/rpggame" element={<RPGGame />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

@@ -48,7 +48,7 @@ function Navigation() {
                 </Nav.Link>
               )}
 
-              <Navbar.Brand className="navbar-brand ms-4" as={Link} to="/">
+              <Navbar.Brand className="navbar-brand ms-4" as={Link} to="/game">
                 <img src={Swan} alt="Swan Icon" height="30" width="30" />
               </Navbar.Brand>
             </div>
