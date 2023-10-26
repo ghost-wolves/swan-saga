@@ -1,13 +1,18 @@
-name = 'My Game'
+name = 'Swan Saga'
 
 modules = [
+   '@rpgjs/title-screen',
     './main',
     '@rpgjs/mobile-gui',
     '@rpgjs/default-gui',
     '@rpgjs/gamepad'
 ]
 
+[titleScreen]
+    title = 'Swan Saga'
+
 [start]
     map = 'simplemap'
-    graphic = 'hero'
+    graphic = 'female'
     hitbox = [16, 16]
+

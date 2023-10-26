@@ -1,0 +1,14 @@
+$title-screen-font-size: 10px;
+$title-screen-font-color: white;
+$title-screen-font-border-color: black;
+$title-screen-background: url('logo3.png');
+$window-font-family: Arial;
+$window-arrow-color: white;
+$window-border: white;
+$window-font-size: 20px;
+$window-font-color: white;
+$window-border-radius: 1px;
+$window-background: rgba(0, 0, 0, 0);
+@mixin window-content {}
+$cursor-background: white;
+$cursor-border: 1px;

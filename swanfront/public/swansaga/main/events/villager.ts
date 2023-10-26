@@ -1,7 +1,7 @@
 import { RpgEvent, EventData, RpgPlayer } from '@rpgjs/server'
 
 @EventData({
-    name: 'EV-1', 
+    name: 'EV-1',
     hitbox: {
         width: 32,
         height: 16
@@ -9,12 +9,12 @@ import { RpgEvent, EventData, RpgPlayer } from '@rpgjs/server'
 })
 export default class VillagerEvent extends RpgEvent {
     onInit() {
-        this.setGraphic('female')
+        this.setGraphic('hero')
     }
     async onAction(player: RpgPlayer) {
-        await player.showText('I give you 10 gold.', {
+        await player.showText('Welcome to Swan Saga! Have some gold!', {
             talkWith: this
         })
         player.gold += 10
     }
-} 
+}

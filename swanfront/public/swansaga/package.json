@@ -15,6 +15,7 @@
         "@rpgjs/mobile-gui": "^4.1.0",
         "@rpgjs/server": "4.1.0",
         "@rpgjs/standalone": "4.1.0",
+        "@rpgjs/title-screen": "^4.1.0",
         "@rpgjs/types": "4.0.5",
         "socket.io-client": "4.7.2"
     },
