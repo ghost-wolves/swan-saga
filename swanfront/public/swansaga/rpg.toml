@@ -13,6 +13,6 @@ modules = [
 
 [start]
     map = 'simplemap'
-    graphic = 'female'
+    graphic = 'kyre'
     hitbox = [16, 16]
 
