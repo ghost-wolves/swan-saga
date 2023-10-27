@@ -7,7 +7,7 @@ import { Container, Nav, Navbar, NavDropdown, Row, Col, Image, Card } from "reac
 function AboutMe() {
   return (
     <Container fluid>
-      <Row className="align-items-center">
+      <Row className=""align-items-center>
         <Col xs={7}>
           <div className="about-me-container">
             <div className="profile-card">
